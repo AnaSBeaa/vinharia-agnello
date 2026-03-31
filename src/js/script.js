@@ -1,3 +1,5 @@
+window.onload = function () {
+
 var vinho = prompt('Insira o nome do vinho:');
 alert('Vinho cadastrado, veja os detalhes no console.');
 
@@ -26,3 +28,4 @@ console.log(`Safra: ${safra}`);
 console.log(`Estoque: ${estoque}`);
 console.log(`Valor de Custo: ${valorCusto}`);
 console.log(`Valor de Venda: ${valorVenda}`);
+};
