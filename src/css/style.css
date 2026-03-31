@@ -1,0 +1,87 @@
+/* Reset básico:
+   Remove margens e espaçamentos padrão do navegador
+   e define box-sizing para facilitar cálculos de layout */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  background: url("../assets/img/fundo-vinheria.png") no-repeat center center fixed;
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  height: 100vh;   /* Altura total */
+  display: flex;   /* Usa Flexbox para centralizar o conteúdo */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* Camada de leitura */
+body::before {
+  content: ""; /* pseudo-elementos */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* container */
+.container {
+  width: 90%;
+  max-width: 700px;
+}
+
+/* cards */
+.card {
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  padding: 40px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* title */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #f5e1a4;
+}
+
+/* descrição */
+.descricao {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ffd7a0;
+  font-weight: bold;
+}
+
+/* texto */
+p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Infos */
+.info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+/* lista */
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
