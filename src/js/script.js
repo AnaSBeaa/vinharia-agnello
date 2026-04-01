@@ -18,10 +18,11 @@ alert('Valor de custo do vinho cadastrado, veja os detalhes no console.');
 var valorVenda = prompt('Insira o valor de venda do vinho:');
 alert('Valor de venda do vinho cadastrado, veja os detalhes no console.');
 
-
+var despesasvariadas = prompt('Insira as despesas variaveis');
+alert ('Despesas Variaveis');
 alert('Cadastro realizado, veja os detalhes no console.');
-var lucro= valorVenda-valorCusto;
-
+var lucrobruto= valorVenda-valorCusto;
+var lucroliquido = lucrobruto-(despesasvariaveis/estoque);
 console.log('----CADASTRO DE VINHO----');
 console.log(`Vinho: ${vinho}`);
 console.log(`Tipo: ${tipo}`);
@@ -29,5 +30,6 @@ console.log(`Safra: ${safra}`);
 console.log(`Estoque: ${estoque}`);
 console.log(`Valor de Custo: ${valorCusto}`);
 console.log(`Valor de Venda: ${valorVenda}`);
-console.log(`Valor Lucro: ${lucro}`);
+console.log(`Valor Lucrobruto: ${lucrobruto}`);
+console.log(`Valor Lucroliquido: ${lucroliquido}`);
 };
