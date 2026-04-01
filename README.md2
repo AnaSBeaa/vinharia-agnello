@@ -1,0 +1,20 @@
+#Forma de execução:
+-O usuário insere o nome do vinho, o tipo (tinto,branco ou rosé), a safra, e a quantidade em estoque
+Após a coleta dessas informações, os dados são exibidos no console do navegador.
+
+##Lógica aplicada: 
+O sistema usa variáveis para armazenar temporariamente os dados fornecidos. Após cada dado inserido, o sistema exibe um aler() confirmando que a informação foi registrada.
+
+###Exibição dos dados 
+Depois de coletar todas as informações, o sistema utiliza console.log() para exibir os dados no console de forma organizada.
+
+####Como executar o projeto
+1-abra o arquivo do projeto no navegador
+2-preencha as informações solicitadas nas janelas que aparecerão
+3-ao finalizar, abra o console para visualizar os dados cadastrados
+
+AUTORIA: 
+Ana Beatriz Santos
+Maria Vitoria Pacheco
+Paloma Cordeiro
+Yasmin Gomes
