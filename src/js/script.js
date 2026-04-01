@@ -20,6 +20,7 @@ alert('Valor de venda do vinho cadastrado, veja os detalhes no console.');
 
 
 alert('Cadastro realizado, veja os detalhes no console.');
+var lucro= valorVenda-valorCusto;
 
 console.log('----CADASTRO DE VINHO----');
 console.log(`Vinho: ${vinho}`);
@@ -28,4 +29,5 @@ console.log(`Safra: ${safra}`);
 console.log(`Estoque: ${estoque}`);
 console.log(`Valor de Custo: ${valorCusto}`);
 console.log(`Valor de Venda: ${valorVenda}`);
+console.log(`Valor Lucro: ${lucro}`);
 };
