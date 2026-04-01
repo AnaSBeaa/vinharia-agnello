@@ -1,35 +1,28 @@
-window.onload = function () {
+function cadastrarVinho() {
 
-var vinho = prompt('Insira o nome do vinho:');
-alert('Vinho cadastrado, veja os detalhes no console.');
+  const vinho = prompt('Insira o nome do vinho:');
+  const tipo = prompt('Insira o tipo do vinho (tinto, branco, rosé):');
+  const safra = prompt('Insira a safra do vinho:');
+  const estoque = Number(prompt('Insira a quantidade em estoque:'));
+  const valorCusto = Number(prompt('Insira o valor de custo do vinho:'));
+  const valorVenda = Number(prompt('Insira o valor de venda do vinho:'));
+  const despesasVariaveis = Number(prompt('Insira as despesas variáveis:'));
 
-var tipo = prompt('Insira o tipo do vinho (tinto, branco, rosé):');
-alert('Tipo do vinho cadastrado, veja os detalhes no console.');
+  const lucroBruto = valorVenda - valorCusto;
+  const lucroLiquido = lucroBruto - (despesasVariaveis / estoque);
 
-var safra = prompt('Insira a safra do vinho:');
-alert('Safra do vinho cadastrada, veja os detalhes no console.');
+  console.log('---- CADASTRO DE VINHO ----');
+  console.log(`Vinho: ${vinho}`);
+  console.log(`Tipo: ${tipo}`);
+  console.log(`Safra: ${safra}`);
+  console.log(`Estoque: ${estoque}`);
+  console.log(`Valor de Custo: ${valorCusto}`);
+  console.log(`Valor de Venda: ${valorVenda}`);
+  console.log(`Lucro Bruto: ${lucroBruto}`);
+  console.log(`Lucro Líquido: ${lucroLiquido}`);
+}
 
-var estoque = prompt('Insira a quantidade em estoque:');
-alert('Quantidade em estoque cadastrada, veja os detalhes no console.');
-
-var valorCusto = prompt('Insira o valor de custo do vinho:');
-alert('Valor de custo do vinho cadastrado, veja os detalhes no console.');
-
-var valorVenda = prompt('Insira o valor de venda do vinho:');
-alert('Valor de venda do vinho cadastrado, veja os detalhes no console.');
-
-var despesasvariadas = prompt('Insira as despesas variaveis');
-alert ('Despesas Variaveis');
-alert('Cadastro realizado, veja os detalhes no console.');
-var lucrobruto= valorVenda-valorCusto;
-var lucroliquido = lucrobruto-(despesasvariaveis/estoque);
-console.log('----CADASTRO DE VINHO----');
-console.log(`Vinho: ${vinho}`);
-console.log(`Tipo: ${tipo}`);
-console.log(`Safra: ${safra}`);
-console.log(`Estoque: ${estoque}`);
-console.log(`Valor de Custo: ${valorCusto}`);
-console.log(`Valor de Venda: ${valorVenda}`);
-console.log(`Valor Lucrobruto: ${lucrobruto}`);
-console.log(`Valor Lucroliquido: ${lucroliquido}`);
-};
+// Executando depois que a página já carregou
+window.addEventListener("load", () => {
+  setTimeout(cadastrarVinho, 100); // pequeno delay o que evita travamento visual
+});
